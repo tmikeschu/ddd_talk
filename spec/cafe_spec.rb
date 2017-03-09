@@ -1,10 +1,6 @@
 require 'cafe'
 
 RSpec.describe Cafe do
-  before do
-    @cafe = Cafe.new
-  end
-
   describe "#make_coffee" do
     it "makes 16 cups of coffee" do
       cafe = Cafe.new
