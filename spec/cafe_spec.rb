@@ -4,10 +4,12 @@ RSpec.describe Cafe do
   describe "#make_coffee" do
     it "makes 16 cups of coffee" do
       cafe = Cafe.new
+      cups_before = cafe.available_cups_of_coffee
+
       cafe.make_coffee
 
-      result = cafe.available_cups_of_coffee
-      expect(result).to eq 16
+      cups_after = cafe.available_cups_of_coffee
+      expect(cups_after - cups_before).to eq 16
     end
   end
 end
